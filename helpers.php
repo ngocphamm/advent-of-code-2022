@@ -14,6 +14,9 @@ function getExecutionTime(bool $reset = false) {
     return $elapsed;
 }
 
+/**
+ * Return input data line by line, using PHP generators.
+ */
 function getDayInputByLine(int $day, $sample = false)
 {
     $dayWithZero = str_pad($day, 2, '0', STR_PAD_LEFT);
