@@ -26,7 +26,7 @@ function getDayInputByLine(int $day, $sample = false)
 
     try {
         while ($line = fgets($file)) {
-            yield $line;
+            yield trim($line);
         }
     } finally {
         fclose($file);

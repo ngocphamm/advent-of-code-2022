@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Day 1: Calorie Counting
+ */
+
 include_once 'helpers.php';
 
 $elfCal1 = 0;
