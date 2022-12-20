@@ -8,7 +8,7 @@ include_once 'helpers.php';
 
 $buffer = getDayInput(6);
 
-function getMarkerStart(string $buffer, int $size) {
+function getMarkerStart(string $buffer, int $size): int {
     // We will get a set of characters of size $size,
     // and move that window one character at a time.
     for ($i = 0; $i < (strlen($buffer) - $size); $i++) {
@@ -17,11 +17,10 @@ function getMarkerStart(string $buffer, int $size) {
 
         // If it's all unique then the length should be the same as $size.
         if (strlen($uniqueSet) === $size) {
-            echo 'Characters processed: ' . ($i + $size) . PHP_EOL;
-            break;
+            return $i + $size;
         }
     }
 }
 
-echo 'Characters processed before first start-of-package:' . getMarkerStart($buffer, 4) . PHP_EOL;
-echo 'Characters processed before first start-of-message:' . getMarkerStart($buffer, 14) . PHP_EOL;
+echo 'Characters processed before first start-of-package: ' . getMarkerStart($buffer, 4) . PHP_EOL;
+echo 'Characters processed before first start-of-message: ' . getMarkerStart($buffer, 14) . PHP_EOL;
