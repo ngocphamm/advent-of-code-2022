@@ -19,7 +19,8 @@ foreach (getDayInputByLine(2) as $round) {
 echo "Total point 1: {$totalPoint1}." . PHP_EOL;
 echo "Total point 2: {$totalPoint2}." . PHP_EOL;
 
-function compete1(string $them, string $you): int {
+function compete1(string $them, string $you): int
+{
     // A = X = Rock -> 1 point.
     // B = Y = Paper -> 2 points.
     // C = Z = Scissors -> 3 points.
@@ -54,7 +55,8 @@ function compete1(string $them, string $you): int {
     }
 }
 
-function compete2(string $them, string $outcome): int {
+function compete2(string $them, string $outcome): int
+{
     // Same A B C meanings as before. Same points.
     $outcome = trim($outcome);
 

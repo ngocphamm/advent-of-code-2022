@@ -8,7 +8,8 @@ include_once 'helpers.php';
 
 $buffer = getDayInput(6);
 
-function getMarkerStart(string $buffer, int $size): int {
+function getMarkerStart(string $buffer, int $size): int
+{
     // We will get a set of characters of size $size,
     // and move that window one character at a time.
     for ($i = 0; $i < (strlen($buffer) - $size); $i++) {
